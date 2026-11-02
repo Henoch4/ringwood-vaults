@@ -53,6 +53,8 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{ou
 <script src="https://cdn.jsdelivr.net/npm/@reown/appkit-adapter-ethers@1.8.21/dist/appkit-adapter-ethers.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script><script>
+const PROJECT_ID = 'ee6081d44f535b82b71aa2003badb2b7'; // AppKit project ID — wired for BOT Chain 677
+
 const ABI=['function createVault(address asset,uint256 feeBps,string name) returns (uint256)','function deposit(uint256 vaultId) payable','function compound(uint256 vaultId)','function withdraw(uint256 vaultId,uint256 amount)','function vaultCount() view returns (uint256)'];
 let vaults=[{id:1,name:'Sprout BOT Loop',apy:12.4,tvl:48200,rings:7,mine:0},{id:2,name:'Canopy LP Blend',apy:21.8,tvl:15900,rings:4,mine:250},{id:3,name:'Deep Root Stable',apy:6.1,tvl:120400,rings:11,mine:0}];
 const fx=n=>n.toLocaleString(undefined,{maximumFractionDigits:2});
