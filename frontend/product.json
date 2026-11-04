@@ -1,9 +1,9 @@
 {
-  "abiSource": "pending-current-source",
+  "abiSource": "runtime-matched-current-source",
   "repo": "ringwood-vaults",
   "brand": "Ringwood Vaults",
   "summary": "Deposit 18-decimal tokens, compound pre-funded rewards, and redeem your shares for real tokens. Rewards come from the funded reserve; no APY is guaranteed.",
-  "address": null,
+  "address": "0x8c5906157Af22a1EA89140983344F68782EC4e00",
   "owner": null,
   "abi": [
     {

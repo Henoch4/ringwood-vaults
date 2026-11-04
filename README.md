@@ -1,10 +1,10 @@
 # Ringwood Vaults
 
-Inspect token vaults, deposit, compound, and withdraw. No external yield strategy or guaranteed APY is configured.
+Deposit 18-decimal tokens, compound pre-funded rewards, and redeem your shares for real tokens. Rewards come from the funded reserve; no APY is guaranteed.
 
 ## Mainnet status
 
-Mainnet deployment is pending. The interface does not simulate transactions or balances.
+Contract on BOT Chain mainnet (677): [0x8c5906157Af22a1EA89140983344F68782EC4e00](https://scan.botchain.ai/address/0x8c5906157Af22a1EA89140983344F68782EC4e00).
 
 Wallet actions require BOT Chain mainnet, deployed bytecode, and a connected compatible wallet. Every action is simulated before a transaction review; only a subsequent wallet confirmation can send it.
 
@@ -19,16 +19,19 @@ Wallet actions require BOT Chain mainnet, deployed bytecode, and a connected com
 
 ## Contract interface
 
-`frontend/product.json` uses the ABI compiled from the current Solidity source.
+`frontend/product.json` uses the current-source ABI, matched against the deployed mainnet runtime bytecode. Explorer source publication is tracked separately.
 
 | Action | Contract signature |
 |---|---|
 | Compound a vault | `compound(uint256)` |
 | Create a vault (owner only) | `createVault(address,uint256)` |
 | Deposit tokens | `deposit(uint256,uint256)` |
+| Fund rewards (owner only) | `fundRewards(uint256,uint256)` |
 | Pause a vault (owner only) | `pauseVault(uint256)` |
+| Redeem your shares | `redeem(uint256,uint256)` |
 | Resume a vault (owner only) | `resumeVault(uint256)` |
 | Withdraw funds | `withdraw(uint256,uint256)` |
+| Withdraw unused rewards (owner only) | `withdrawUnusedRewards(uint256)` |
 
 ## Run locally
 
